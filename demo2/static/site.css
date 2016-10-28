@@ -1,0 +1,7 @@
+body {
+    color: red;
+}
+
+a, a:visited {
+    color: #000;
+}
