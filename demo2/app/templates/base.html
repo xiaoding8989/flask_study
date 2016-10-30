@@ -1,0 +1,18 @@
+{% extends 'bootstrap/base.html' %}
+{% block head %}
+    {{ super() }}
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+{% endblock %}
+<body>
+<header>{% block header %}{% endblock %}</header>
+{% block navbar %}{% endblock %}
+<div>{% block content %}{% endblock %}</div>
+<footer>
+    {% block footer %}
+        Copy 2016 by <a href="www.baidu.com">百度</a>
+    {% endblock %}
+</footer>
+{% block styles %}
+{% endblock %}
+

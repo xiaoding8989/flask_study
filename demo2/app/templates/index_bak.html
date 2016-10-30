@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flask</title>
+</head>
+<body>
+{{ title|safe }}{{ body|safe }}
+<br>
+{% set links=[
+('index',url_for('.index')),
+('about',url_for('.about')),
+('services',url_for('.services')),
+] %}
+<nav>
+    {% for label,href in links %}
+        {% if not loop.first %}|{% endif %}
+        <a href="{% if href is current_link %} #
+                  {% else %}
+                  {{ href }}
+                  {% endif %}">
+                     {{ label }}</a>
+    {% endfor %}
+
+</nav>
+
+
+</body>
+</html>
